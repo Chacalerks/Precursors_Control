@@ -1,0 +1,33 @@
+{% extends 'base.html' %} 
+{% block title %}
+    Upload Excel Files
+{% endblock %} 
+
+{% block content %} 
+<h2 class="mb-4">Upload Excel Files</h2>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#fileUploadModal">
+    Upload Files
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="fileUploadModal" tabindex="-1" aria-labelledby="fileUploadModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="fileUploadModalLabel">Select Excel Files</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <input type="file" multiple accept=".xls,.xlsx" id="excelFiles">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Upload Files</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
